@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+:root{
+  --primary: #ddd;
+  --dark: #333;
+  --light: #fff;
+  --shadow: 0 1px 5px rgba(104,104,104,0.9);
+    --mi:rgb(19, 18, 18);
+}
+
+html{
+  box-sizing: border-box;
+  font-family: Montserrat, sans-serif;
+  color: var(--dark);
+  text-decoration: none;
+  border: 0;
+}
+
+body{
+  background: #ccc;
+  margin: 30px 70px;
+  line-height: 1.4;
+}
+
+.wrapper{
+  display: grid;
+  grid-gap: 20px;
+}
+
+/*NAVIGATION*/
+.main-nav ul{
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /*grid-gap: 20px;*/
+}
+
+.main-nav a{
+  background: var(--primary);
+  display: block;
+  text-decoration: none;
+  padding: 0.7rem;
+  text-align: center;
+  color: var(--dark);
+  text-transform: uppercase;
+  font-size: 19px;
+  
+  /*box-shadow: var(--shadow);*/
+}
+
+.main-nav a:hover{
+  background: var(--dark);
+  color: var(--light);
+}
+
+/*TOP CONTAINER*/
+.top-container {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas:
+    'showcase showcase top-box-a'
+    'showcase showcase top-box-b';
+}
+
+/*SHOWCASE*/
+.showcase{
+  grid-area: showcase;
+  min-height: 400px;
+  background: url('https://i.postimg.cc/Kzxj8QLR/uriel-soberanes-ngd2uo1ey-Zg-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 3em;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content:center;
+  box-shadow: var(--dark);
+}
+
+img{
+  max-width: 100%;
+}
+
+.showcase h1{
+  color: var(--mi);
+  font-size: 4em;
+  margin-bottom: 0;
+  font-family: 'Archivo Black', sans-serif;
+}
+
+.showcase p{
+  font-size: 1.3rem;
+  margin-top: 0;
+  color: #000;
+  background: #ccc;
+}
+
+.btn{
+  background: var(--dark);
+  color: var(--light);
+  padding: 0.6rem 1.3em;
+  text-decoration: none;
+}
+/*TOP BOX*/
+.top-box{
+  background: var(--primary);
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+}
+
+.top-box .price{
+  font-size: 2.5rem;
+}
+
+.top-box-a{
+  grid-area: top-box-a;
+}
+
+.top-box-a h4{
+  font-size: 23px;
+}
+
+.top-box-b h4{
+  font-size: 23px;
+}
+
+
+.top-box-b{
+  grid-area: top-box-b;
+}
+
+/*BOXES*/
+.boxes{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  margin-top: 10px;
+  grid-gap: 20px;
+}
+
+.box{
+  background: var(--primary);
+  text-align: center;
+  padding: 1.2rem;
+  box-shadow: var(--shadow);
+}
+
+.box i:hover{
+  cursor:pointer;
+}
+
+/*INFO*/
+.info{
+  background: var(--primary);
+  box-shadow: var(--shadow);
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  padding: 2rem;
+  grid-gap: 20px;
+}
+
+/*CONTACT*/
+.contact{
+  display: grid;
+  background: var(--dark);
+  grid-template-columns: repeat(1,1fr);
+  padding: 1rem;
+}
+
+.contact h2{
+  color: var(--light);
+}
+
+.contact p{
+  color: var(--light);
+}
+
+
+
+.email{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 320px;
+}
+
+.name input{
+  width: 340px;
+  border: none;
+  height: 20px;
+}
+
+.email input{
+  width: 340px;
+  border-radius: 0px;
+  height: 30px;
+  border: none;
+}
+
+.message input{
+  height: 95px;
+  width: 340px;
+  border: none;
+  margin-bottom: 10px;
+  
+}
+
+.btn1{
+ border: 0px;
+ border-radius: 6px;
+ background: var(--light);
+ color: var(--dark);
+ width: 340px;
+  height: 40px;
+ font-size: 17px;
+ letter-spacing: 7px;
+}
+
+.btn1:hover{
+  color: #fff;
+  background: #000;
+  cursor: pointer;
+}
+
+
+footer{
+  display: grid;
+  background: var(--dark);
+  color: var(--light);
+  align-items: center;
+  justify-items: center;
+  box-shadow: var(--shadow);
+}
